@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 # Read data into papers
-papers = pd.read_csv('unique_common_app_essays (1).csv')
+papers = pd.read_csv('test3.csv')
 # Print head
 papers.head()
 papers.drop(columns=['Category'])
@@ -106,7 +106,7 @@ def preprocess(doc):
     tokens = [lemmatizer.lemmatize(word) for word in tokens]
     return tokens
 
-test = pd.read_csv('test2.csv')
+test = pd.read_csv('test3.csv')
 for i, row in test.iterrows():
     new_doc = row['Text']
     cat = row['Category']
